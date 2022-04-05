@@ -1,0 +1,23 @@
+{
+  "name": "rest-country",
+  "version": "1.0.0",
+  "description": "![Design preview for the REST Countries API with color theme switcher coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gmayer111/REST-Countries-API.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gmayer111/REST-Countries-API/issues"
+  },
+  "homepage": "https://github.com/Gmayer111/REST-Countries-API#readme",
+  "devDependencies": {
+    "typescript": "^4.6.3"
+  }
+}

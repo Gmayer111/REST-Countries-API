@@ -217,6 +217,7 @@ main .action-section .filter-bar .display-country {
   margin-top: 0.4rem;
   position: relative;
   z-index: 2;
+  display: none;
 }
 
 main .action-section .filter-bar .display-country ul {
