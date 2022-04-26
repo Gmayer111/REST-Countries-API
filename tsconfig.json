@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "outDir": "dist",
+        "target": "ES6",
+        "moduleResolution": "node",
+        "noEmitOnError": true,
+        "strict": true
+    },
+    "files": [
+        "src/script/app.ts"
+    ]
+}

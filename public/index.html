@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap" rel="stylesheet">  
-    <link rel="stylesheet" href="../assets/style/home.css">
+    <link rel="stylesheet" href="../src/style/home.css">
 </head>
 <body>
     <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -36,21 +36,21 @@
             <button>Dark mode</button>
         </div>
     </header>
-    <main>
+    <main id="main-block">
         <section class="action-section">
             <label class="search-bar" for="">
                 <svg class="icon icon-search"><use xlink:href="#icon-search"></use></svg>
                 <input type="text" placeholder="Search for a country ...">
             </label>
             <div class="filter-bar">
-                <div class="filter-title">
+                <button id="filter" class="filter-title">
                     <span>filter by region</span>
                     <div class="arrow"></div>
-                </div>
+                </button>
                 <div class="display-country" id="show-country">
                     <ul>
-                        <div>
-                            <li id="show-country"></li>
+                        <div id="regionDiv">
+                            
                         </div>
                     </ul>
                 </div>
@@ -140,5 +140,6 @@
 
         
     </main>
+    <script src="/dist/app.js"></script>
 </body>
 </html>

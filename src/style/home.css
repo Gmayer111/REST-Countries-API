@@ -19,6 +19,11 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
+button {
+  border: none;
+  background-color: transparent;
+}
+
 html, body {
   height: 100%;
   background-color: #202c37;
@@ -192,6 +197,8 @@ main .action-section .filter-bar .filter-title {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  color: white;
+  cursor: pointer;
 }
 
 main .action-section .filter-bar .filter-title span {
@@ -230,12 +237,13 @@ main .action-section .filter-bar .display-country ul li {
   height: 20px;
 }
 
-main .action-section .filter-bar .display-country ul div {
+main .action-section .filter-bar .display-country ul .regionLi:hover {
+  background-color: cadetblue;
   height: 100%;
+  cursor: pointer;
 }
 
-main .action-section .filter-bar .display-country ul div:hover {
-  background-color: cadetblue;
+main .action-section .filter-bar .display-country ul div {
   height: 100%;
 }
 

@@ -19,6 +19,12 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
+button {
+    border: none;
+    background-color: transparent;
+    
+}
+
 html, body {
     height: 100%;
     background-color: hsl(207, 26%, 17%);
@@ -142,6 +148,8 @@ main {
             display: flex;
             align-items: center;
             justify-content: space-around;
+            color: hsl(0, 0%, 100%);
+            cursor: pointer;
             
             span {
                 padding-left: 0.7rem;
@@ -158,6 +166,8 @@ main {
             
             .arrow:hover {
                 cursor: pointer;
+
+                
             }
         }
 
@@ -177,12 +187,13 @@ main {
                     height: 20px;
                 }
 
-                div {
-                    height: 100%;
+                .regionLi:hover {
+                    background-color: cadetblue;
+                    height: 100%;   
+                    cursor: pointer;
                 }
 
-                div:hover {
-                    background-color: cadetblue;
+                div {
                     height: 100%;
                 }
             }
