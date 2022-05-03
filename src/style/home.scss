@@ -220,10 +220,12 @@ main {
             
             img {
                 border-radius: 5px 5px 0 0;
+                width : 240px;
+                height : 160px;
             }
 
 
-            .info-country {
+            .info-block {
                 background-color: hsl(209, 23%, 22%);
                 height: 150px;
                 display: flex;

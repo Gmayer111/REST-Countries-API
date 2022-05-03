@@ -282,9 +282,11 @@ main .country-section .block-country {
 
 main .country-section .block-country img {
   border-radius: 5px 5px 0 0;
+  width: 240px;
+  height: 160px;
 }
 
-main .country-section .block-country .info-country {
+main .country-section .block-country .info-block {
   background-color: #2b3945;
   height: 150px;
   display: -webkit-box;
@@ -299,13 +301,13 @@ main .country-section .block-country .info-country {
   border-radius: 0 0 5px 5px;
 }
 
-main .country-section .block-country .info-country h2 {
+main .country-section .block-country .info-block h2 {
   position: relative;
   left: 1rem;
   font-weight: 800;
 }
 
-main .country-section .block-country .info-country ul {
+main .country-section .block-country .info-block ul {
   position: relative;
   left: 1rem;
   list-style: none;
