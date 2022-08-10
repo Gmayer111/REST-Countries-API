@@ -7,6 +7,7 @@
         "strict": true
     },
     "files": [
-        "src/script/app.ts"
+        "src/script/app.ts",
+        "src/script/module.ts"
     ]
 }
