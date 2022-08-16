@@ -26,8 +26,8 @@ button {
 
 html, body {
   height: 100%;
-  background-color: #202c37;
-  font-family: 'Nunito Sans', sans-serif;
+  background-color: hsl(207deg, 26%, 17%);
+  font-family: "Nunito Sans", sans-serif;
   font-size: 16px;
 }
 
@@ -41,93 +41,62 @@ html, body {
 }
 
 header {
-  background-color: #2b3945;
+  background-color: hsl(209deg, 23%, 22%);
   width: 100%;
   height: 10%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-shadow: 0 0.1em 0.5em 0.1em #1a2228;
-          box-shadow: 0 0.1em 0.5em 0.1em #1a2228;
+  justify-content: space-between;
+  box-shadow: 0 0.1em 0.5em 0.1em hsl(208deg, 22%, 13%);
 }
-
 header .title-header {
   font-size: 1.2em;
   font-weight: 800;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   position: relative;
   left: 50px;
-  color: white;
+  color: hsl(0deg, 0%, 100%);
 }
-
 header div + div {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  justify-content: flex-end;
   font-weight: 800;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   position: relative;
   right: 50px;
-  color: white;
+  color: hsl(0deg, 0%, 100%);
 }
-
 header div + div svg {
   font-size: 0.9em;
 }
-
 header div + div button {
   height: 50%;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: 0.9em;
   font-weight: 400;
   border: none;
-  color: white;
+  color: hsl(0deg, 0%, 100%);
   background-color: transparent;
 }
 
 main {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  color: white;
+  flex-direction: column;
+  color: hsl(0deg, 0%, 100%);
   position: relative;
   z-index: 0;
 }
-
 main .action-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   position: relative;
   margin-top: 40px;
 }
-
 main .action-section label {
   left: 45px;
   position: relative;
 }
-
 main .action-section label .icon {
   position: absolute;
   width: 13px;
@@ -135,182 +104,120 @@ main .action-section label .icon {
   top: 15px;
   left: 20px;
 }
-
 main .action-section label input {
   width: 400px;
   height: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #2b3945;
+  align-items: center;
+  background-color: hsl(209deg, 23%, 22%);
   padding-left: 50px;
   border-style: none;
-  color: white;
+  color: hsl(0deg, 0%, 100%);
   font-size: 0.9em;
 }
-
-main .action-section label input::-webkit-input-placeholder {
-  color: white;
+main .action-section label input::-moz-placeholder {
+  color: hsl(0deg, 0%, 100%);
   opacity: 10;
 }
-
 main .action-section label input:-ms-input-placeholder {
-  color: white;
+  color: hsl(0deg, 0%, 100%);
   opacity: 10;
 }
-
-main .action-section label input::-ms-input-placeholder {
-  color: white;
-  opacity: 10;
-}
-
 main .action-section label input::placeholder {
-  color: white;
+  color: hsl(0deg, 0%, 100%);
   opacity: 10;
 }
-
 main .action-section .filter-bar {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   position: relative;
   right: 45px;
 }
-
 main .action-section .filter-bar .filter-title {
   height: 40px;
   width: 200px;
-  background-color: #2b3945;
+  background-color: hsl(209deg, 23%, 22%);
   font-size: 0.9em;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  color: white;
+  align-items: center;
+  justify-content: space-around;
+  color: hsl(0deg, 0%, 100%);
   cursor: pointer;
 }
-
 main .action-section .filter-bar .filter-title span {
   padding-left: 0.7rem;
 }
-
 main .action-section .filter-bar .filter-title .arrow {
   width: 8px;
   height: 8px;
   border: 1px solid;
-  border-right: white;
-  border-bottom: white;
-  -webkit-transform: rotate(225deg);
-          transform: rotate(225deg);
+  border-right: hsl(0deg, 0%, 100%);
+  border-bottom: hsl(0deg, 0%, 100%);
+  transform: rotate(225deg);
 }
-
 main .action-section .filter-bar .filter-title .arrow:hover {
   cursor: pointer;
 }
-
 main .action-section .filter-bar .display-country {
-  background-color: #2b3945;
+  background-color: hsl(209deg, 23%, 22%);
   margin-top: 0.4rem;
   position: relative;
   z-index: 2;
   display: none;
 }
-
 main .action-section .filter-bar .display-country ul {
   list-style: none;
 }
-
 main .action-section .filter-bar .display-country ul li {
   padding-left: 1rem;
   margin: 1rem;
   height: 20px;
 }
-
 main .action-section .filter-bar .display-country ul .regionLi:hover {
   background-color: cadetblue;
   height: 100%;
   cursor: pointer;
 }
-
 main .action-section .filter-bar .display-country ul div {
   height: 100%;
 }
-
 main .country-section {
   position: absolute;
   top: 100px;
   z-index: 1;
   margin: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
-
 main .country-section .block-country {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
   margin: 2rem;
 }
-
 main .country-section .block-country img {
   border-radius: 5px 5px 0 0;
   width: 240px;
   height: 160px;
 }
-
 main .country-section .block-country .info-block {
-  background-color: #2b3945;
+  background-color: hsl(209deg, 23%, 22%);
   height: 150px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-direction: column;
+  justify-content: space-around;
   border-radius: 0 0 5px 5px;
 }
-
 main .country-section .block-country .info-block h2 {
   position: relative;
   left: 1rem;
   font-weight: 800;
 }
-
 main .country-section .block-country .info-block ul {
   position: relative;
   left: 1rem;
   list-style: none;
   font-size: 0.8em;
-}
-/*# sourceMappingURL=home.css.map */
+}/*# sourceMappingURL=home.css.map */
