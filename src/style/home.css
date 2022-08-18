@@ -209,6 +209,7 @@ main .country-section .block-country .info-block {
   flex-direction: column;
   justify-content: space-around;
   border-radius: 0 0 5px 5px;
+  width: 240px;
 }
 main .country-section .block-country .info-block h2 {
   position: relative;

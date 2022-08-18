@@ -13,14 +13,9 @@ const request = fetch(url)
     for (let i = 0; i < data.length; i++) {
 
         if (!data[i].hasOwnProperty('capital')) {
-            delete data[i]
             i++
         }        
-     
-
-
-
-
+    
         let blockCountry = document.createElement('div')
         let ul = document.createElement('ul')
         let img = document.createElement('img')
@@ -30,6 +25,7 @@ const request = fetch(url)
         div.className = 'info-block'
         img.src = data[i].flags.png
         title.innerText = data[i].name.common
+        
         
         
         let liData = [data[i].population, data[i].region, data[i].capital[0]]
@@ -60,6 +56,4 @@ const request = fetch(url)
         
     }
     
-    
-    // Fin de display region
 })
