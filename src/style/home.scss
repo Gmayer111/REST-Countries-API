@@ -49,6 +49,7 @@ header {
     justify-content: space-between;
     box-shadow: 0 0.1em 0.5em 0.1em hsl(208, 22%, 13%);
 
+
     .title-header {
         font-size: 1.2em;
         font-weight: 800;     
@@ -139,6 +140,8 @@ main {
         flex-direction: column;
         position: relative;
         right: 45px;
+        //position: fixed;
+        //z-index: 2;
 
         .filter-title {
             height: 40px;
@@ -150,6 +153,7 @@ main {
             justify-content: space-around;
             color: hsl(0, 0%, 100%);
             cursor: pointer;
+            positi
             
             span {
                 padding-left: 0.7rem;
@@ -208,10 +212,11 @@ main {
         flex-direction: row;
         justify-content: space-between;
         flex-wrap: wrap;
+        //display: none;
         
 
         .block-country {
-            display: flex;
+            //display: flex;
             flex-direction: column;
             justify-content: center;
             margin: 2rem;

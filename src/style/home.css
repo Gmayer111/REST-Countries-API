@@ -144,7 +144,7 @@ main .action-section .filter-bar .filter-title {
   color: hsl(0deg, 0%, 100%);
   cursor: pointer;
 }
-main .action-section .filter-bar .filter-title span {
+main .action-section .filter-bar .filter-title positi span {
   padding-left: 0.7rem;
 }
 main .action-section .filter-bar .filter-title .arrow {
@@ -192,7 +192,6 @@ main .country-section {
   flex-wrap: wrap;
 }
 main .country-section .block-country {
-  display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 2rem;

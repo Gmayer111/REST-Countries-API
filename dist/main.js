@@ -1,8 +1,9 @@
 const filterButton = document.querySelector('#filter');
-const showContinents = document.querySelector('#show-region');
+const showFilter = document.querySelector('#show-region');
 const blockFilter = document.querySelector('#filter-block')
 const regionDiv = document.querySelector('#regionDiv');
 const sectionCountry = document.querySelector('#section-country');
+
 
 const url = 'https://restcountries.com/v3.1/all/';
 let myArray = [];
@@ -73,29 +74,31 @@ let clicked = 1;
 //     blockCountry: document.createElement('div')
 // }
 
-    function BlockContent(data, value) {
+function BlockContent(data, value) {
 
-        for (let i = 0; i < data.length; i++) {
+    
+
+    for (let i = 0; i < 7; i++) {
 
         // Ajoute aucun chef lieu si aucune capitale
-        if (!data[i].hasOwnProperty('capital')) 
-            data[i]['capital'] = ['Aucun chef-lieu']
-            
-        // On crée le block country pour itérer dessus
 
+        if (!data[i].hasOwnProperty('capital')) 
+        data[i]['capital'] = ['Aucun chef-lieu']
+        
+        // On crée le block country pour itérer dessus    
         let blockCountry = document.createElement('div')
+        blockCountry.className = 'block-country'
         let ul = document.createElement('ul')
         let img = document.createElement('img')
         let div = document.createElement('div')
-        let title = document.createElement('h2')
-        blockCountry.className = 'block-country'     
-        //console.log(blockCountry);                       
+        let title = document.createElement('h2')                 
         div.className = 'info-block'
         img.src = data[i].flags.png
         title.innerText = data[i].name.common
-
-        let liData = [data[i].population, data[i].region, data[i].capital[0]]
         
+        let liData = [data[i].population, data[i].region, data[i].capital[0]]
+    
+    
         let dataObject = {
             Population : data[i].population,
             Region : data[i].region,
@@ -106,43 +109,48 @@ let clicked = 1;
             let li = document.createElement('li')
             
             for (const key in dataObject) {
-    
+                
                 if (dataObject[key] === liData[index]) 
-                    if (key == 'Region') {
-                        li.className = 'li-region'
-                        li.textContent = `${key} : ${liData[index]}`
-                    }else {
-                        li.textContent = `${key} : ${liData[index]}`
-                    }
+                if (key == 'Region') {
+                    li.className = 'li-region'
+                    li.textContent = `${key} : ${liData[index]}`
+                }else {
+                    li.textContent = `${key} : ${liData[index]}`
+                }
             }   
             ul.append(li)
         }
-
+        
         div.append(title, ul)
-        blockCountry.append(img, div)    
-
-        console.log(blockCountry.children[1].children[1].children[1].innerText.replace('Region :', '').trim());
-        if (blockCountry.children[1].children[1].children[1].innerText.replace('Region :', '').trim() == value) {
-            //console.log(data[i].region, value);
-            // display none blockCOuntry
-            sectionCountry.append(blockCountry)   
+        blockCountry.append(img, div)   
+        //blockCountry.children[1].children[1].children[1].innerText.replace('Region :', '').trim()  
+        if (data[i].region == value) {
+            sectionCountry.append(blockCountry)
+            return
+            console.log(i);
         }else {
-            sectionCountry.append(blockCountry)   
+            //sectionCountry.append(blockCountry)
         }
-
     }
 
-    }
+}
+
+function showFilterBlock() {
+    
+}
+
+
 
 const request = fetch(url)
 .then(response => response.json())
 .then(data => {
 
+
     this.BlockContent(data)
-
-    filterButton.addEventListener('click', () => {
-
-        showContinents.style.display = 'block';
+    
+    filterButton.addEventListener('click', e => {
+        
+        showFilter.style.display = 'block';
         
         for ( let i = 0; i < data.length; i++) {
             myArray.push(data[i].region)
@@ -151,7 +159,7 @@ const request = fetch(url)
         myOArray = [... new Set(myArray)]
         
         if (clicked === 1) {
-
+            
             for (let i = 0; i < myOArray.length; i++) {
                 
                 let li = document.createElement('li')
@@ -160,27 +168,28 @@ const request = fetch(url)
                 regionDiv.appendChild(li)  
                 clicked = 2;
             }          
-
+            
         }else if (clicked === 2) {
             clicked = 0;
         }
 
+
         const liRegion = document.querySelectorAll('.regionLi');
-        liRegion.forEach(function (element) {
-            element.addEventListener('click', () => {
+            liRegion.forEach(function (element) {
+                element.addEventListener('click', e => {
 
-                let liContent = element.textContent
-                let value = liContent.replace('Region :', '').trim()
-                this.BlockContent(data, value)
+                    let value = element.textContent
+                    this.BlockContent(data, value)
 
+                })
 
-            })
-
-        })               
-    })
-
-    blockFilter.addEventListener('mouseleave', () => {
-            showContinents.style.display = 'none'
+            })               
     })
     
+    blockFilter.addEventListener('mouseleave', e => {
+        showFilter.style.display = 'none'
+    })    
+
 })
+
+
