@@ -89,7 +89,7 @@ main {
 }
 main .action-section {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   position: relative;
   margin-top: 40px;
 }

@@ -99,7 +99,7 @@ main {
     
     .action-section {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
         position: relative;
         margin-top: 40px;
         
@@ -135,72 +135,72 @@ main {
             
         }
         
-    .filter-bar {
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        right: 45px;
-        //position: fixed;
-        //z-index: 2;
-
-        .filter-title {
-            height: 40px;
-            width: 200px;
-            background-color: hsl(209, 23%, 22%);
-            font-size: 0.9em;
+        .filter-bar {
             display: flex;
-            align-items: center;
-            justify-content: space-around;
-            color: hsl(0, 0%, 100%);
-            cursor: pointer;
-            positi
-            
-            span {
-                padding-left: 0.7rem;
-            }
-            
-            .arrow {
-                width: 8px;
-                height: 8px;
-                border: 1px solid;
-                border-right: hsl(0, 0%, 100%);
-                border-bottom: hsl(0, 0%, 100%);
-                transform: rotate(225deg);
-            }
-            
-            .arrow:hover {
-                cursor: pointer;
-            }
-        }
-
-        .display-country {
-            background-color: hsl(209, 23%, 22%);
-            margin-top: 0.4rem;
+            flex-direction: column;
             position: relative;
-            z-index: 2;
-            display: none;
-            
-            ul {
-                list-style: none;
+            right: 45px;
+            //position: fixed;
+            //z-index: 2;
 
-                li {
-                    padding-left: 1rem;
-                    margin: 1rem;
-                    height: 20px;
+            .filter-title {
+                height: 40px;
+                width: 200px;
+                background-color: hsl(209, 23%, 22%);
+                font-size: 0.9em;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                color: hsl(0, 0%, 100%);
+                cursor: pointer;
+                positi
+                
+                span {
+                    padding-left: 0.7rem;
                 }
-
-                .regionLi:hover {
-                    background-color: cadetblue;
-                    height: 100%;   
+                
+                .arrow {
+                    width: 8px;
+                    height: 8px;
+                    border: 1px solid;
+                    border-right: hsl(0, 0%, 100%);
+                    border-bottom: hsl(0, 0%, 100%);
+                    transform: rotate(225deg);
+                }
+                
+                .arrow:hover {
                     cursor: pointer;
                 }
+            }
 
-                div {
-                    height: 100%;
+            .display-country {
+                background-color: hsl(209, 23%, 22%);
+                margin-top: 0.4rem;
+                position: relative;
+                z-index: 2;
+                display: none;
+                
+                ul {
+                    list-style: none;
+
+                    li {
+                        padding-left: 1rem;
+                        margin: 1rem;
+                        height: 20px;
+                    }
+
+                    .regionLi:hover {
+                        background-color: cadetblue;
+                        height: 100%;   
+                        cursor: pointer;
+                    }
+
+                    div {
+                        height: 100%;
+                    }
                 }
             }
-        }
-    }    
+        }    
 }
     
     .country-section {
