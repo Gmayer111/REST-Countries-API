@@ -10,7 +10,6 @@ let clicked = 1;
 
 function BlockContent(data) {
     for (let i = 0; i < data.length; i++) {
-        console.log(data, 'for');
         // Ajoute aucun chef lieu si aucune capitale
         if (!data[i].hasOwnProperty('capital')) 
         data[i]['capital'] = ['Aucun chef-lieu']
@@ -54,8 +53,8 @@ function BlockContent(data) {
         div.append(title, ul)
         blockCountry.append(img, div)  
         sectionCountry.append(blockCountry)
+
     }
-    //console.log(data, 'out for');
 
 }
 
@@ -84,7 +83,6 @@ filterButton.addEventListener('click', e => {
                 const requestRegion = fetch(`https://restcountries.com/v3.1/region/${value}`)
                 .then(response => response.json())
                 .then(data => {
-                    console.log('ici');
                     this.BlockContent(data)
                 })
                 
@@ -101,7 +99,6 @@ filterButton.addEventListener('click', e => {
     
  showRegion.addEventListener('mouseleave', e => {
     showRegion.style.display = 'none'
-    console.log(e.target);
 })                           
  
 
