@@ -195,6 +195,7 @@ main .country-section .block-country {
   flex-direction: column;
   justify-content: center;
   margin: 2rem;
+  cursor: pointer;
 }
 main .country-section .block-country img {
   border-radius: 5px 5px 0 0;
@@ -220,4 +221,30 @@ main .country-section .block-country .info-block ul {
   left: 1rem;
   list-style: none;
   font-size: 0.8em;
+}
+main .country-section .display-country-info {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  left: 15%;
+  width: 70vw;
+  height: 100vh;
+  background-color: hsl(209deg, 23%, 29%);
+  z-index: 2;
+  display: none;
+  background-color: antiquewhite;
+}
+main .country-section .display-country-info div {
+  display: flex;
+  justify-content: flex-end;
+}
+main .country-section .display-country-info div button {
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+}
+main .country-section .display-country-info div button img {
+  width: 30px;
+  height: 30px;
+  margin: 2rem;
 }/*# sourceMappingURL=home.css.map */

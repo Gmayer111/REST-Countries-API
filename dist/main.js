@@ -3,6 +3,8 @@ const showRegion = document.querySelector('#show-region');
 const filterBlock = document.querySelector('#filter-block')
 const regionDiv = document.querySelector('#regionDiv');
 const sectionCountry = document.querySelector('#section-country');
+const closeModal = document.querySelector('#close-modal')
+const displayCountryInfo = document.querySelector('#display-country-box')
 const regionArray = ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania']
 const urlAll = 'https://restcountries.com/v3.1/all/';
 const urlRegion = 'https://restcountries.com/v3.1/region/';
@@ -54,6 +56,12 @@ function BlockContent(data) {
         blockCountry.append(img, div)  
         sectionCountry.append(blockCountry)
 
+        blockCountry.addEventListener('click', e => {
+            displayCountryInfo.style.display = 'block'
+            sectionCountry.append(displayCountryInfo)
+            displayCountryInfo.append(blockCountry)
+        }) 
+
     }
 
 }
@@ -102,6 +110,8 @@ filterButton.addEventListener('click', e => {
 })                           
  
 
-
+closeModal.addEventListener('click', e => {
+    displayCountryInfo.style.display = 'none'
+})
 
 
